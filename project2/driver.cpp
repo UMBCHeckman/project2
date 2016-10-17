@@ -10,5 +10,6 @@ int main(int arg, char ** argv)
 {
 
     printGreeting();
+    loadCommodities("butt")
     return 0;
 }
