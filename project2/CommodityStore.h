@@ -13,6 +13,7 @@ using namespace std;
 
 class CommodityStore{
 public:
+    CommodityStore();
     void loadCommodities(string filename);
     Commodity* getCommodity(string name): Commodity*;
 private:
