@@ -46,7 +46,7 @@ Commodity::Commodity(string name, string color)//Non default constructor, takes 
 }
 Commodity::~Commodity()
 {
-    //dtor
+    //delete
 }
 string Commodity::getName()const
 {

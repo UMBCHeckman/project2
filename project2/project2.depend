@@ -1,7 +1,17 @@
 # depslib dependency file v1.0
-1476729182 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.cpp
+1476762192 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.cpp
+	<string>
+	<vector>
+	<iostream>
+	<stdlib.h>
+	"CommodityStore.h"
+	"Card.h"
+	<map>
+	<fstream>
+	<sstream>
+	<cstdlib>
 
-1476753891 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commodity.cpp
+1476759821 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commodity.cpp
 	"Commodity.h"
 	<iostream>
 	<string>
@@ -9,7 +19,7 @@
 1476751119 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commodity.h
 	<string>
 
-1476740107 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commoditystore.cpp
+1476759455 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commoditystore.cpp
 	<string>
 	<vector>
 	<iostream>
@@ -29,7 +39,7 @@
 	<sstream>
 	<cstdlib>
 
-1476741457 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\driver.cpp
+1476760136 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\driver.cpp
 	"Commodity.h"
 	"CommodityStore.h"
 	"Objective.h"
@@ -43,7 +53,7 @@
 	"CommodityStore.h"
 	<iostream>
 
-1476740178 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.h
+1476756289 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.h
 	"Commodity.h"
 	"CommodityStore.h"
 	"Objective.h"
@@ -60,7 +70,7 @@
 
 1476729074 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\game.cpp
 
-1476729249 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\objective.cpp
+1476765755 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\objective.cpp
 
 1476729129 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\player.cpp
 

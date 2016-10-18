@@ -25,18 +25,19 @@ void CommodityStore::loadCommodities(string filename)
     string color;//the color of that commodity
     filename = "commodities.txt";
     dataFile.open("commodities.txt");//, ios_base::in);
-    while (getline(dataFile, line))
+    Commodity *myCommodity;
+    while (dataFile)
     {
         dataFile >> name;
-        cout << name << endl;
         dataFile >> color;
-        cout << color << endl;
-        *myCommodity = new Commodity(name, color);
-        m_store.insert(filename, myCommodity);
+        myCommodity = new Commodity(name, color);
+        m_store.insert(pair<string, Commodity*>(name, myCommodity));
         //new Commodity(dataFile >> line, dataFile >> line)
     }
-Commodity* getCommodity(string name){
-
+    dataFile.close();
 }
+Commodity* CommodityStore::getCommodity(string name){
+    //cerr << m_store.find(name)->second->getName() << " " << m_store.find(name)->second->getColor() << endl;
+    return m_store.find(name)->second;
 }
 #endif

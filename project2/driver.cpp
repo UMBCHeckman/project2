@@ -16,7 +16,8 @@ int main(int arg, char ** argv)
 {
     printGreeting();
     string test = "test";
-    //CommodityStore MyStore = CommodityStore();
-    //MyStore.loadCommodities(test);
+    CommodityStore MyStore = CommodityStore();
+    MyStore.loadCommodities(test);
+    //cerr << MyStore.getCommodity("Beer")->getColor();
     return 0;
 }

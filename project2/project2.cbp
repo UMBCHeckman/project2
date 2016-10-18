@@ -34,13 +34,21 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Card.cpp" />
 		<Unit filename="Card.h" />
+		<Unit filename="Commodity.cpp" />
 		<Unit filename="Commodity.h" />
+		<Unit filename="CommodityStore.cpp" />
 		<Unit filename="CommodityStore.h" />
 		<Unit filename="Driver.cpp" />
+		<Unit filename="Game.cpp" />
 		<Unit filename="Game.h" />
+		<Unit filename="Objective.cpp" />
 		<Unit filename="Objective.h" />
+		<Unit filename="Player.cpp" />
 		<Unit filename="Player.h" />
+		<Unit filename="cards.txt" />
+		<Unit filename="commodities.txt" />
 		<Extensions>
 			<code_completion />
 			<envvars />
