@@ -29,8 +29,8 @@ int Objective::getPayoff()const
 {
     return m_iPayoff;
 }
-void Objective::printObjective()//ofstream& fileStream)
+void Objective::printObjective(ofstream& fileStream)
 {
-    cerr << getDestination() << getCommodity()->getName() << getPayoff() << endl;
+    fileStream << getDestination() << getCommodity()->getName() << getPayoff() << endl;
 }
 #endif // OBJECTIVE_CPP

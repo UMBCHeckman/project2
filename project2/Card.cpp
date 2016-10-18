@@ -40,11 +40,11 @@ Objective* Card::getByColor(Commodity::COLOR color)
 {
 
 }
-void Card::printCard()//std::ofstream& fileStream)
+void Card::printCard(std::ofstream& fileStream)
 {
-    cerr << "Card" << endl;
+    fileStream << "Card" << endl;
     for(int i = 0; i < m_objectives.size(); i++){
-        m_objectives[i]->printObjective();
+        m_objectives[i]->printObjective(fileStream);
     }
     //for (std::vector<Objective*>::const_iterator i = m_objectives.begin(); i != m_objectives.end(); ++i)
     //cerr << &i->printObjective() << ' ';

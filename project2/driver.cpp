@@ -17,9 +17,10 @@ int main(int argc, char ** argv)
 {
     string cardsFilename = "cards.txt";//argv[1];
     string commodityFilename = "commodities.txt";//argv[2];
-    ifstream results("results.txt");
+    ofstream results("results.txt");
     printGreeting();
-    Game(cardsFilename, commodityFilename);
+    Game myGame = Game(cardsFilename, commodityFilename);
+    myGame.printDrawPile(results);
     //cerr << MyStore.getCommodity("Beer")->getColor();
     results.close();
     return 0;

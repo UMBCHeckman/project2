@@ -17,7 +17,7 @@ public:
     Objective* getBestPayoff();
     Objective* getFirstAlphaDestination();
     Objective* getByColor(Commodity::COLOR color);
-    void printCard();//std::ofstream& fileStream);
+    void printCard(std::ofstream& fileStream);
 private:
     vector<Objective*> m_objectives;
 };

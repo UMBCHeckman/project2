@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1476824919 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.cpp
+1476827282 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.cpp
 	<string>
 	<vector>
 	<iostream>
@@ -41,7 +41,7 @@
 	<sstream>
 	<cstdlib>
 
-1476824139 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\driver.cpp
+1476827002 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\driver.cpp
 	"Commodity.h"
 	"CommodityStore.h"
 	"Objective.h"
@@ -51,12 +51,12 @@
 	<iostream>
 	<string>
 
-1476824262 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\objective.h
+1476825391 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\objective.h
 	"Commodity.h"
 	"CommodityStore.h"
 	<iostream>
 
-1476824241 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.h
+1476825440 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.h
 	"Commodity.h"
 	"CommodityStore.h"
 	"Objective.h"
@@ -72,12 +72,12 @@
 	<iostream>
 	<queue>
 
-1476824966 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\game.cpp
+1476827348 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\game.cpp
 	"Game.h"
 	<iostream>
 	<istream>
 
-1476824218 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\objective.cpp
+1476825377 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\objective.cpp
 	"Objective.h"
 	<iostream>
 
