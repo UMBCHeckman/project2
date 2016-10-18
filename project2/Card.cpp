@@ -20,21 +20,9 @@ Card::Card()
 {
     //intentionally empty
 }
-Card::Card(istream &line)
+Card::Card(string Destination1, string Commodity1, string Payoff1, string Destination2, string Commodity2, string Payoff2, string Destination3, string Commodity3, string Payoff3)
 {
-    Objective *myObjective;
-    //ifstream iss;
-    //iss = ifstream(line);
-    //getline(cin,line);
-    //istringstream iss(line);
-    string Destination,Commodity,Payoff;
-    while(line) {
-    line >> Destination;//lines within cards.txt should all follow this structure
-    line >> Commodity;
-    line >> Payoff;
-    myObjective = new Objective((Destination), (Commodity), (atoi(Payoff.c_str())));//Payoff must be converted from a string to an integer
-    addObjective(myObjective);
-    }
+
 }
 void Card::addObjective(Objective* objective)
 {
@@ -52,9 +40,14 @@ Objective* Card::getByColor(Commodity::COLOR color)
 {
 
 }
-void Card::printCard(std::ofstream& fileStream)
+void Card::printCard()//std::ofstream& fileStream)
 {
-
+    cerr << "Card" << endl;
+    for(int i = 0; i < m_objectives.size(); i++){
+        m_objectives[i]->printObjective();
+    }
+    //for (std::vector<Objective*>::const_iterator i = m_objectives.begin(); i != m_objectives.end(); ++i)
+    //cerr << &i->printObjective() << ' ';
 }
 
 #endif

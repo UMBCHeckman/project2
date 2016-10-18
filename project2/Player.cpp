@@ -26,7 +26,7 @@ int Player::calculateScore(Player::STRATEGY strategy)
 {
 
 }
-void Player::printResult(std:::ofstream& fileStream)
+void Player::printResult(std::ofstream& fileStream)
 {
 
 }

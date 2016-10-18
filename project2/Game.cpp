@@ -10,22 +10,35 @@ Game::Game()
 {
     //intentionally empty
 }
-Game::Game(string filename)
+Game::Game(string cardsFilename, string commodityFilename)
 {
-    ifstream dataFile;
-    istream *line;
-    string Destination, Commodity, Payoff;//aspects of an Objective
-    filename = "cards.txt";
-    dataFile.open("cards.txt");
-    Objective *myObjective;
+    m_bank.loadCommodities(commodityFilename);
+    ifstream dataFile(cardsFilename.c_str());
+    string Destination1, Commodity1, Payoff1, Destination2, Commodity2, Payoff2, Destination3, Commodity3, Payoff3;//aspects of an Objective
+    //dataFile.open();
     Card *myCard;
+    Objective *myObjective;
     while (dataFile)
     {
-        &line = getline(dataFile);
-        myCard = new Card(line);
-        //dataFile >> Destination;
-        //dataFile >> Commodity;
-        //dataFile >> Payoff;
+
+        dataFile >> Destination1;
+        dataFile >> Commodity1;
+        dataFile >> Payoff1;
+        dataFile >> Destination2;
+        dataFile >> Commodity2;
+        dataFile >> Payoff2;
+        dataFile >> Destination3;
+        dataFile >> Commodity3;
+        dataFile >> Payoff3;
+        myCard = new Card();
+        myObjective = new Objective((Destination1), (m_bank.getCommodity(Commodity1)), (atoi(Payoff1.c_str())));//Payoff must be converted from a string to an integer
+        myCard->addObjective(myObjective);
+        myObjective = new Objective((Destination1), (m_bank.getCommodity(Commodity2)), (atoi(Payoff2.c_str())));
+        myCard->addObjective(myObjective);
+        myObjective = new Objective((Destination1), (m_bank.getCommodity(Commodity2)), (atoi(Payoff3.c_str())));
+        myCard->addObjective(myObjective);
+        m_drawPile.push(myCard);
+        //myCard = new Card(Destination1, Commodity1, Payoff1, Destination2, Commodity2, Payoff2, Destination3, Commodity3, Payoff3);
         //*Commodityobj = CommodityStore::getCommodity(Commodity);
         //myObjective = new Objective(Destination, Commodityobj, atoi(Payoff);
         //m_drawPile.push(myCard);

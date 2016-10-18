@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1476820779 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.cpp
+1476824919 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.cpp
 	<string>
 	<vector>
 	<iostream>
@@ -21,7 +21,7 @@
 1476751119 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commodity.h
 	<string>
 
-1476759455 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commoditystore.cpp
+1476821858 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commoditystore.cpp
 	<string>
 	<vector>
 	<iostream>
@@ -41,21 +41,22 @@
 	<sstream>
 	<cstdlib>
 
-1476768160 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\driver.cpp
+1476824139 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\driver.cpp
 	"Commodity.h"
 	"CommodityStore.h"
 	"Objective.h"
 	"Card.h"
 	"Player.h"
+	"Game.h"
 	<iostream>
 	<string>
 
-1476819487 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\objective.h
+1476824262 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\objective.h
 	"Commodity.h"
 	"CommodityStore.h"
 	<iostream>
 
-1476820445 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.h
+1476824241 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.h
 	"Commodity.h"
 	"CommodityStore.h"
 	"Objective.h"
@@ -71,11 +72,27 @@
 	<iostream>
 	<queue>
 
-1476729074 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\game.cpp
+1476824966 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\game.cpp
+	"Game.h"
+	<iostream>
+	<istream>
 
-1476803680 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\objective.cpp
+1476824218 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\objective.cpp
 	"Objective.h"
 	<iostream>
 
-1476729129 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\player.cpp
+1476823481 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\player.cpp
+	"Player.h"
+	<iostream>
+	<queue>
+
+1476822158 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\game.h
+	"Commodity.h"
+	"CommodityStore.h"
+	"Objective.h"
+	"Card.h"
+	"Player.h"
+	<iostream>
+	<stack>
+	<vector>
 

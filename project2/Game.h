@@ -14,7 +14,7 @@ using namespace std;
 class Game{
 public:
     Game();
-    Game(string filename);
+    Game(string cardsFilename, string commodityFilename);
     void runSimulation(int players, Player::STRATEGY strategy);
     void printDrawPile(std::ofstream& fileStream);
     void printResults(std::ofstream& fileStream);

@@ -3,6 +3,7 @@
 #include "Objective.h"
 #include "Card.h"
 #include "Player.h"
+#include "Game.h"
 #include <iostream>
 #include <string>
 
@@ -12,12 +13,14 @@ void printGreeting(){
     cout << "WELCOMB THIS IS A GREEITG!!00" << endl;
     cout << "Name: Steven Heckman. Section 5." << endl;
 }
-int main(int arg, char ** argv)
+int main(int argc, char ** argv)
 {
+    string cardsFilename = "cards.txt";//argv[1];
+    string commodityFilename = "commodities.txt";//argv[2];
+    ifstream results("results.txt");
     printGreeting();
-    string test = "test";
-    CommodityStore MyStore = CommodityStore();
-    MyStore.loadCommodities(test);
+    Game(cardsFilename, commodityFilename);
     //cerr << MyStore.getCommodity("Beer")->getColor();
+    results.close();
     return 0;
 }

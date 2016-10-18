@@ -11,10 +11,10 @@ Objective::Objective()
 {
     //intentionally empty
 }
-Objective::Objective(string Destination, string Commodity, int Payoff)
+Objective::Objective(string Destination, Commodity* Commodity, int Payoff)
 {
     m_sDestination = Destination;
-    m_pCommodity = CommodityStore::getCommodity(Commodity);
+    m_pCommodity = Commodity;
     m_iPayoff = Payoff;
 }
 string Objective::getDestination()const
@@ -29,7 +29,7 @@ int Objective::getPayoff()const
 {
     return m_iPayoff;
 }
-void Objective::printObjective(ofstream& fileStream)
+void Objective::printObjective()//ofstream& fileStream)
 {
     cerr << getDestination() << getCommodity()->getName() << getPayoff() << endl;
 }

@@ -15,7 +15,7 @@ using namespace std;
 
 CommodityStore::CommodityStore()
 {
-
+    //intentionally blank
 }
 void CommodityStore::loadCommodities(string filename)
 {
