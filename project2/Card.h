@@ -4,12 +4,15 @@
 #include "CommodityStore.h"
 #include "Objective.h"
 #include <iostream>
+#include <istream>
 #include <vector>
 
 using namespace std;
 
 class Card{
 public:
+    Card();
+    Card(istream &line);
     void addObjective(Objective* objective);
     Objective* getBestPayoff();
     Objective* getFirstAlphaDestination();

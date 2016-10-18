@@ -8,6 +8,8 @@ using namespace std;
 
 class Objective{
 public:
+    Objective();
+    Objective(string Destination, string Commodity, int Payoff);
     string getDestination()const;
     Commodity* getCommodity()const;
     int getPayoff()const;

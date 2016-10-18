@@ -6,11 +6,15 @@
 #include "Card.h"
 #include "Player.h"
 #include <iostream>
+#include <stack>
+#include <vector>
 
 using namespace std;
 
 class Game{
 public:
+    Game();
+    Game(string filename);
     void runSimulation(int players, Player::STRATEGY strategy);
     void printDrawPile(std::ofstream& fileStream);
     void printResults(std::ofstream& fileStream);

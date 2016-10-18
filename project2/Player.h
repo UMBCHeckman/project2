@@ -21,6 +21,7 @@ public:
         COLOR_GREEN,
         COLOR_BROWN
     };
+    Player();
     string getName()const;
     int getScore()const;
     void addCard(Card*card);
