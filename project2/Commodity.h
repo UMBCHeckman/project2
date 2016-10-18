@@ -1,5 +1,6 @@
 #ifndef COMMODITY_H
-#define COMMODITY
+#define COMMODITY_H
+
 #include <string>
 using namespace std;
 
@@ -7,6 +8,10 @@ using namespace std;
 
 class Commodity{
 public:
+    Commodity();
+    Commodity(string name, string color);
+    ~Commodity();
+
         enum COLOR{
             PURPLE,
             RED,
@@ -21,4 +26,5 @@ public:
 private:
     string m_sName;
     COLOR m_eColor;
+};
 #endif

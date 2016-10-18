@@ -1,14 +1,15 @@
 #ifndef PLAYER_H
-#define PLAYER
+#define PLAYER_H
 #include "Commodity.h"
 #include "CommodityStore.h"
 #include "Objective.h"
 #include "Card.h"
 #include <iostream>
+#include <queue>
 
 using namespace std;
 
-class Player(){
+class Player{
 public:
     enum STRATEGY{
         BEST_PAYOFF,

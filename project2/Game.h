@@ -1,5 +1,5 @@
 #ifndef GAME_H
-#define GAME
+#define GAME_H
 #include "Commodity.h"
 #include "CommodityStore.h"
 #include "Objective.h"

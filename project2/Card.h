@@ -1,13 +1,14 @@
 #ifndef CARD_H
-#define CARD
+#define CARD_H
 #include "Commodity.h"
 #include "CommodityStore.h"
 #include "Objective.h"
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
-class Card(){
+class Card{
 public:
     void addObjective(Objective* objective);
     Objective* getBestPayoff();
@@ -15,7 +16,7 @@ public:
     Objective* getByColor(Commodity::COLOR color);
     void printCard(std::ofstream& fileStream);
 private:
-    std:vector<Objective*> m_objectives;
+    vector<Objective*> m_objectives;
 };
 
 #endif // CARD_H

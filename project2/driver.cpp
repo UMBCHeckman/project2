@@ -1,4 +1,10 @@
+#include "Commodity.h"
+#include "CommodityStore.h"
+#include "Objective.h"
+#include "Card.h"
+#include "Player.h"
 #include <iostream>
+#include <string>
 
 using namespace std;
 
@@ -8,8 +14,9 @@ void printGreeting(){
 }
 int main(int arg, char ** argv)
 {
-
     printGreeting();
-    loadCommodities("butt")
+    string test = "test";
+    //CommodityStore MyStore = CommodityStore();
+    //MyStore.loadCommodities(test);
     return 0;
 }

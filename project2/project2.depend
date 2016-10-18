@@ -1,0 +1,66 @@
+# depslib dependency file v1.0
+1476729182 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.cpp
+
+1476753891 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commodity.cpp
+	"Commodity.h"
+	<iostream>
+	<string>
+
+1476751119 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commodity.h
+	<string>
+
+1476740107 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commoditystore.cpp
+	<string>
+	<vector>
+	<iostream>
+	<stdlib.h>
+	"CommodityStore.h"
+	<map>
+	<fstream>
+	<sstream>
+	<cstdlib>
+
+1476731555 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commoditystore.h
+	<string>
+	<vector>
+	"Commodity.h"
+	<map>
+	<fstream>
+	<sstream>
+	<cstdlib>
+
+1476741457 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\driver.cpp
+	"Commodity.h"
+	"CommodityStore.h"
+	"Objective.h"
+	"Card.h"
+	"Player.h"
+	<iostream>
+	<string>
+
+1476730901 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\objective.h
+	"Commodity.h"
+	"CommodityStore.h"
+	<iostream>
+
+1476740178 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.h
+	"Commodity.h"
+	"CommodityStore.h"
+	"Objective.h"
+	<iostream>
+	<vector>
+
+1476742101 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\player.h
+	"Commodity.h"
+	"CommodityStore.h"
+	"Objective.h"
+	"Card.h"
+	<iostream>
+	<queue>
+
+1476729074 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\game.cpp
+
+1476729249 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\objective.cpp
+
+1476729129 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\player.cpp
+

@@ -1,5 +1,5 @@
 #ifndef OBJECTIVE_H
-#define OBJECTIVE
+#define OBJECTIVE_H
 #include "Commodity.h"
 #include "CommodityStore.h"
 #include <iostream>

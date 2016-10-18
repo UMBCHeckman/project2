@@ -1,5 +1,6 @@
 #ifndef COMMODITYSTORE_H
-#define COMMODITYSTORE
+#define COMMODITYSTORE_H
+
 #include <string>
 #include <vector>
 #include "Commodity.h"
@@ -15,8 +16,9 @@ class CommodityStore{
 public:
     CommodityStore();
     void loadCommodities(string filename);
-    Commodity* getCommodity(string name): Commodity*;
+    Commodity* getCommodity(string name);
 private:
-    map<string Commodity*> m_store;
+    map<string, Commodity*> m_store;
 };
+
 #endif // COMMODITYSTORE_H

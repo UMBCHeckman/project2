@@ -37,10 +37,10 @@
 		<Unit filename="Card.h" />
 		<Unit filename="Commodity.h" />
 		<Unit filename="CommodityStore.h" />
+		<Unit filename="Driver.cpp" />
 		<Unit filename="Game.h" />
 		<Unit filename="Objective.h" />
 		<Unit filename="Player.h" />
-		<Unit filename="driver.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
