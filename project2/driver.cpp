@@ -9,16 +9,15 @@
 
 using namespace std;
 
-void printGreeting(){
-    cout << "WELCOMB THIS IS A GREEITG!!00" << endl;
-    cout << "Name: Steven Heckman. Section 5." << endl;
+void printGreeting(std::ofstream& fileStream){
+    fileStream << "Steven Heckman, Section 5." << endl;
 }
 int main(int argc, char ** argv)
 {
     string cardsFilename = "cards.txt";//argv[1];
     string commodityFilename = "commodities.txt";//argv[2];
     ofstream results("results.txt");
-    printGreeting();
+    printGreeting(results);
     Game myGame = Game(cardsFilename, commodityFilename);
     myGame.printDrawPile(results);
     //cerr << MyStore.getCommodity("Beer")->getColor();

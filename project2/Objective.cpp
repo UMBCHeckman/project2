@@ -31,6 +31,6 @@ int Objective::getPayoff()const
 }
 void Objective::printObjective(ofstream& fileStream)
 {
-    fileStream << getDestination() << getCommodity()->getName() << getPayoff() << endl;
+    fileStream << getCommodity()->getName() << " to " << getDestination() << " for " << getPayoff() << endl;
 }
 #endif // OBJECTIVE_CPP

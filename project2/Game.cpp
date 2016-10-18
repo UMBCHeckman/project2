@@ -56,9 +56,12 @@ void Game::runSimulation(int players, Player::STRATEGY strategy)
 }
 void Game::printDrawPile(std::ofstream& fileStream)
 {
+    fileStream << "---------- Draw Pile ----------" << endl;
     stack<Card*> printPile = m_drawPile;
-    cerr << printPile.size() << endl;
-    for(int i = 0; i < printPile.size(); i++){
+    //cerr << printPile.size() << endl;
+    int s = printPile.size();
+    for(int i = 0; i < s; i++){
+        //cerr << i << endl;
         printPile.top()->printCard(fileStream);
         printPile.pop();
     }
