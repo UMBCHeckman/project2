@@ -24,7 +24,7 @@ int main(int argc, char ** argv)
 //    int strategy = atoi(argv[4]);
     string cardsFilename = "cards.txt";
     string commodityFilename = "commodities.txt";
-    int numPlayers = 4;
+    int numPlayers = 1;
     int strategy = 0;
     ofstream results("results.txt");
     printGreeting(results);

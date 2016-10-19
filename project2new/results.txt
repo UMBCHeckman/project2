@@ -103,31 +103,25 @@ Tourists to Nantes for 17
 ---------- RESULTS ----------
 --------Player 1------------
 Marble to London for 31
-Cork to Wroclaw for 59
-Ham to Roma for 35
-Wheat to Stockholm for 46
-Cork to Aberdeen for 63
-Score: 234
---------Player 2------------
 Oranges to Ruhr for 33
-Fish to Warszawa for 38
-Bauxite to Kobenhavn for 30
-Cork to Budapest for 60
-Machinery to Cork for 30
-Score: 191
---------Player 3------------
 Sheep to Sarajevo for 44
-Flowers to Valencia for 34
-Fish to Munchen for 38
-Fish to Leipzig for 30
-Tobacco to Warszawa for 39
-Score: 185
---------Player 4------------
 Marble to Stockholm for 55
+Cork to Wroclaw for 59
+Fish to Warszawa for 38
+Flowers to Valencia for 34
 Oranges to Praha for 43
+Ham to Roma for 35
+Bauxite to Kobenhavn for 30
+Fish to Munchen for 38
 Cork to Napoli for 52
+Wheat to Stockholm for 46
+Cork to Budapest for 60
+Fish to Leipzig for 30
 Steel to Porto for 37
+Cork to Aberdeen for 63
+Machinery to Cork for 30
+Tobacco to Warszawa for 39
 Oranges to Birmingham for 38
-Score: 225
+Score: 835
 --------------------------
-Winner: Player 1 Score: 234 points.
+Winner: Player 1 Score: 835 points.
