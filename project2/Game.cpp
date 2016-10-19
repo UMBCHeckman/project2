@@ -4,6 +4,8 @@
 #include <iostream>
 #include <istream>
 #include <sstream>
+#define SSTR( x ) static_cast< std::ostringstream & >( \
+        ( std::ostringstream() << std::dec << x ) ).str()
 
 using namespace std;
 
@@ -52,6 +54,39 @@ Game::Game(string cardsFilename, string commodityFilename)
 }
 void Game::runSimulation(int players, Player::STRATEGY strategy)
 {
+    string playerName;
+    Player *myPlayer;
+    for(int i = 0; i < players; i++)
+    {
+        playerName = "Player " + SSTR(i+1);
+        //cerr << playerName << endl;
+        myPlayer = new Player(playerName);
+        m_players.push_back(myPlayer);
+    }
+    int cardsPerPlayer = (m_drawPile.size() / m_players.size());
+    if (cardsPerPlayer == 0)
+    {
+        cerr << "Not enough cards to go around! Try again with less players." << endl;
+        exit(1);
+    }
+    for (int j = 0; j < cardsPerPlayer; j++)
+    {
+        for (int i = 0; i < m_players.size(); i++)
+        {
+            m_players[i]->addCard(m_drawPile.top());
+            m_drawPile.pop();
+        }
+    }
+    Player *bestPlayer;
+    int bestScore = 0;
+    for(int i = 0; i < m_players.size(); i++)
+    {
+        if(m_players[i]->calculateScore(strategy) > bestScore)
+        {
+            bestScore = m_players[i]->calculateScore(strategy);
+            bestPlayer = m_players[i];
+        }
+    }
 
 }
 void Game::printDrawPile(std::ofstream& fileStream)
@@ -60,7 +95,8 @@ void Game::printDrawPile(std::ofstream& fileStream)
     stack<Card*> printPile = m_drawPile;
     //cerr << printPile.size() << endl;
     int s = printPile.size();
-    for(int i = 0; i < s; i++){
+    for(int i = 0; i < s; i++)
+    {
         //cerr << i << endl;
         printPile.top()->printCard(fileStream);
         printPile.pop();
@@ -68,7 +104,21 @@ void Game::printDrawPile(std::ofstream& fileStream)
 }
 void Game::printResults(std::ofstream& fileStream)
 {
-
+    fileStream << "---------- RESULTS ----------" << endl;
+    Player *bestPlayer;
+    int bestScore = 0;
+    for(int i = 0; i < m_players.size(); i++)
+    {
+        fileStream << "--------" << m_players[i]->getName() << "------------" << endl;
+        m_players[i]->printResult(fileStream);
+        if(m_players[i]->getScore() > bestScore)
+        {
+            bestScore = m_players[i]->getScore();
+            bestPlayer = m_players[i];
+        }
+    }
+    fileStream << "--------------------------" << endl;
+    fileStream << "Winner: " << bestPlayer->getName() << " Score: " << bestScore << " points.";
 }
 
 #endif //GAME_CPP

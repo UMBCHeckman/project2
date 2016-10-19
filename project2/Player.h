@@ -22,6 +22,7 @@ public:
         COLOR_BROWN
     };
     Player();
+    Player(string name);
     string getName()const;
     int getScore()const;
     void addCard(Card*card);
@@ -31,5 +32,6 @@ private:
     string m_sName;
     queue<Card*> m_cards;
     queue<Objective*> m_objectives;
+    int m_score;
 };
 #endif // PLAYER_H

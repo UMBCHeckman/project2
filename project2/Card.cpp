@@ -30,11 +30,27 @@ void Card::addObjective(Objective* objective)
 }
 Objective* Card::getBestPayoff()
 {
-
+    Objective *bestObjective;
+    int bestSoFar = 0;
+    for(int j = 0; j < m_objectives.size(); j++){
+                if((m_objectives[j]->getPayoff()) > bestSoFar){
+                    bestSoFar = (m_objectives[j]->getPayoff());
+                    bestObjective = m_objectives[j];
+                }
+    }
+    return bestObjective;
 }
 Objective* Card::getFirstAlphaDestination()
 {
-
+    Objective *bestObjective;
+    string bestSoFar = "zzzzzzzzzzzzzzzzzzzzzzzzz";
+    for(int j = 0; j < m_objectives.size(); j++){
+                if((m_objectives[j]->getDestination().compare(bestSoFar)) < 0){
+                        bestSoFar = m_objectives[j]->getDestination();
+                        bestObjective = m_objectives[j];
+                }
+                }
+    return bestObjective;
 }
 Objective* Card::getByColor(Commodity::COLOR color)
 {
