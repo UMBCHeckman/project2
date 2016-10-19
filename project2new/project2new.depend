@@ -13,12 +13,34 @@
 	<sstream>
 	<cstdlib>
 
+1476731555 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commoditystore.h
+	<string>
+	<vector>
+	"Commodity.h"
+	<map>
+	<fstream>
+	<sstream>
+	<cstdlib>
+
+1476751119 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commodity.h
+	<string>
+
+1476825440 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.h
+	"Commodity.h"
+	"CommodityStore.h"
+	"Objective.h"
+	<iostream>
+	<istream>
+	<vector>
+
+1476825391 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\objective.h
+	"Commodity.h"
+	"CommodityStore.h"
+	<iostream>
+
 1476759821 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commodity.cpp
 	"Commodity.h"
 	<iostream>
-	<string>
-
-1476751119 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commodity.h
 	<string>
 
 1476821858 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commoditystore.cpp
@@ -32,16 +54,7 @@
 	<sstream>
 	<cstdlib>
 
-1476731555 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commoditystore.h
-	<string>
-	<vector>
-	"Commodity.h"
-	<map>
-	<fstream>
-	<sstream>
-	<cstdlib>
-
-1476850675 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\driver.cpp
+1476851983 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\driver.cpp
 	"Commodity.h"
 	"CommodityStore.h"
 	"Objective.h"
@@ -51,19 +64,6 @@
 	<iostream>
 	<string>
 
-1476825391 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\objective.h
-	"Commodity.h"
-	"CommodityStore.h"
-	<iostream>
-
-1476825440 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.h
-	"Commodity.h"
-	"CommodityStore.h"
-	"Objective.h"
-	<iostream>
-	<istream>
-	<vector>
-
 1476837439 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\player.h
 	"Commodity.h"
 	"CommodityStore.h"
@@ -71,6 +71,16 @@
 	"Card.h"
 	<iostream>
 	<queue>
+
+1476822158 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\game.h
+	"Commodity.h"
+	"CommodityStore.h"
+	"Objective.h"
+	"Card.h"
+	"Player.h"
+	<iostream>
+	<stack>
+	<vector>
 
 1476848762 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\game.cpp
 	"Game.h"
@@ -86,14 +96,4 @@
 	"Player.h"
 	<iostream>
 	<queue>
-
-1476822158 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\game.h
-	"Commodity.h"
-	"CommodityStore.h"
-	"Objective.h"
-	"Card.h"
-	"Player.h"
-	<iostream>
-	<stack>
-	<vector>
 

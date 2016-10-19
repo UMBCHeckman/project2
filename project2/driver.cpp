@@ -18,15 +18,14 @@ int main(int argc, char ** argv)
        // cerr << "Not enough command line arguments!" << endl;
      //   exit(1);
     //}
-    cerr << "what";
-    string cardsFilename = argv[1];
-    string commodityFilename = argv[2];
-    int numPlayers = atoi(argv[3]);
-    int strategy = atoi(argv[4]);
-    cardsFilename = "cards.txt";
-    commodityFilename = "commodities.txt";
-    numPlayers = 4;
-    strategy = 0;
+//    string cardsFilename = argv[1];
+//    string commodityFilename = argv[2];
+//    int numPlayers = atoi(argv[3]);
+//    int strategy = atoi(argv[4]);
+    string cardsFilename = "cards.txt";
+    string commodityFilename = "commodities.txt";
+    int numPlayers = 4;
+    int strategy = 0;
     ofstream results("results.txt");
     printGreeting(results);
     Game myGame = Game(cardsFilename, commodityFilename);

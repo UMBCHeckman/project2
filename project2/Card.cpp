@@ -32,11 +32,13 @@ Objective* Card::getBestPayoff()
 {
     Objective *bestObjective;
     int bestSoFar = 0;
-    for(int j = 0; j < m_objectives.size(); j++){
-                if((m_objectives[j]->getPayoff()) > bestSoFar){
-                    bestSoFar = (m_objectives[j]->getPayoff());
-                    bestObjective = m_objectives[j];
-                }
+    for(int j = 0; j < m_objectives.size(); j++)
+    {
+        if((m_objectives[j]->getPayoff()) > bestSoFar)
+        {
+            bestSoFar = (m_objectives[j]->getPayoff());
+            bestObjective = m_objectives[j];
+        }
     }
     return bestObjective;
 }
@@ -44,22 +46,40 @@ Objective* Card::getFirstAlphaDestination()
 {
     Objective *bestObjective;
     string bestSoFar = "zzzzzzzzzzzzzzzzzzzzzzzzz";
-    for(int j = 0; j < m_objectives.size(); j++){
-                if((m_objectives[j]->getDestination().compare(bestSoFar)) < 0){
-                        bestSoFar = m_objectives[j]->getDestination();
-                        bestObjective = m_objectives[j];
-                }
-                }
+    for(int j = 0; j < m_objectives.size(); j++)
+    {
+        if((m_objectives[j]->getDestination().compare(bestSoFar)) < 0)
+        {
+            bestSoFar = m_objectives[j]->getDestination();
+            bestObjective = m_objectives[j];
+        }
+    }
     return bestObjective;
 }
 Objective* Card::getByColor(Commodity::COLOR color)
 {
-
+    Objective *bestObjective;
+    int bestSoFar = 0;
+    for(int j = 0; j < m_objectives.size(); j++)
+    {
+        if((m_objectives[j]->getCommodity()->getColor()) == color)
+        {
+            if((m_objectives[j]->getPayoff()) > bestSoFar){
+            bestSoFar = m_objectives[j]->getPayoff();
+            bestObjective = m_objectives[j];
+            }
+        }
+    }
+    if (bestSoFar == 0){
+        return getBestPayoff();
+    }
+    return bestObjective;
 }
 void Card::printCard(std::ofstream& fileStream)
 {
     fileStream << "---------- CARD ----------" << endl;
-    for(int i = 0; i < m_objectives.size(); i++){
+    for(int i = 0; i < m_objectives.size(); i++)
+    {
         m_objectives[i]->printObjective(fileStream);
     }
     fileStream << "--------------------------" << endl;

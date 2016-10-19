@@ -35,8 +35,35 @@ int Player::calculateScore(Player::STRATEGY strategy)
         case 0: //BEST_PAYOFF
             m_objectives.push(cardCopy.front()->getBestPayoff());
             cardCopy.pop();
+            break;
         case 1://FIRST_ALPHA_DESTINATION
             m_objectives.push(cardCopy.front()->getFirstAlphaDestination());
+            cardCopy.pop();
+            break;
+        case 2://COLOR_PURPLE
+            m_objectives.push(cardCopy.front()->getByColor((Commodity::COLOR)(strategy-2)));
+            cardCopy.pop();
+            break;
+        case 3://COLOR_RED
+            m_objectives.push(cardCopy.front()->getByColor((Commodity::COLOR)(strategy-2)));
+            cardCopy.pop();
+            break;
+        case 4://COLOR_ORANGE
+            m_objectives.push(cardCopy.front()->getByColor((Commodity::COLOR)(strategy-2)));
+            cardCopy.pop();
+            break;
+        case 5://COLOR_BLACK
+            m_objectives.push(cardCopy.front()->getByColor((Commodity::COLOR)(strategy-2)));
+            cardCopy.pop();
+            break;
+        case 6://COLOR_GREEN
+            m_objectives.push(cardCopy.front()->getByColor((Commodity::COLOR)(strategy-2)));
+            cardCopy.pop();
+        case 7://COLOR_BROWN
+            m_objectives.push(cardCopy.front()->getByColor((Commodity::COLOR)(strategy-2)));
+            cardCopy.pop();
+            break;
+            break;
         default:
             cerr << "I didn't implement that strategy, or that strategy is illegal. Either way, we're done here." << endl;
             exit(1);

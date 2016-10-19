@@ -83,7 +83,7 @@ void Game::runSimulation(int players, Player::STRATEGY strategy)
     {
         if(m_players[i]->calculateScore(strategy) > bestScore)
         {
-            bestScore = m_players[i]->calculateScore(strategy);
+            bestScore = m_players[i]->getScore();
             bestPlayer = m_players[i];
         }
     }
