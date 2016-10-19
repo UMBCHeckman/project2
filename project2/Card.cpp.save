@@ -13,7 +13,7 @@
  **   This file generates a "Card" object.
 
 
- **   This file contains constructors and functions.
+ **   This file contains constructers and functions.
  **   This file contains a vector that changes in size dynamically.
  **   This file does NOT call new directly.
  **   This file has only a default constructor for Card.
@@ -79,20 +79,18 @@ Objective* Card::getByColor(Commodity::COLOR color)//returns objective with the 
     {
         if((m_objectives[j]->getCommodity()->getColor()) == color)//if we found the color of choice
         {
-            if((m_objectives[j]->getPayoff()) > bestSoFar) //if another commodity with the chosen color and a larger payoff is discovered, that should be returned instead.
-            {
-                bestSoFar = m_objectives[j]->getPayoff();
-                bestObjective = m_objectives[j];
+            if((m_objectives[j]->getPayoff()) > bestSoFar){//if another commodity with the chosen color and a larger payoff is discovered, that should be returned instead.
+            bestSoFar = m_objectives[j]->getPayoff();
+            bestObjective = m_objectives[j];
             }
         }
     }
-    if (bestSoFar == 0) //if none of the selected color appear the Color based strategies resolve as if they were the highest value strategy.
-    {
+    if (bestSoFar == 0){//if none of the selected color appear the Color based strategies resolve as if they were the hi
         return getBestPayoff();
     }
     return bestObjective;
 }
-void Card::printCard(std::ofstream& fileStream)//prints a card to the results file.
+void Card::printCard(std::ofstream& fileStream)
 {
     fileStream << "---------- CARD ----------" << endl;
     for(unsigned int i = 0; i < m_objectives.size(); i++)

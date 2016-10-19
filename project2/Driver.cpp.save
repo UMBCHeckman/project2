@@ -26,15 +26,14 @@
 
 using namespace std;
 
-void printGreeting(std::ofstream& fileStream) //prints a very basic greeting to the text file.
-{
+void printGreeting(std::ofstream& fileStream){//prints a very basic greeting to the text file.
     fileStream << "Steven Heckman, Section 5." << endl;
 }
 int main(int argc, char ** argv)
 {
     //if (argc !=4){
-    // cerr << "Not enough command line arguments!" << endl;
-    //   exit(1);
+       // cerr << "Not enough command line arguments!" << endl;
+     //   exit(1);
     //}
 //    string cardsFilename = argv[1];
 //    string commodityFilename = argv[2];

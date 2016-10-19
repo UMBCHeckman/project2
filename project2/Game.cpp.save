@@ -109,7 +109,7 @@ void Game::printDrawPile(std::ofstream& fileStream)//prints the draw pile
     fileStream << "---------- Draw Pile ----------" << endl;
     stack<Card*> printPile = m_drawPile;
     //cerr << printPile.size() << endl;
-    int s = printPile.size();//til: don't use a stack in the declaration of a for loop that pops from that stack.
+    int s = printPile.size();//til: don't use
     for(int i = 0; i < s; i++)
     {
         //cerr << i << endl;
@@ -117,7 +117,7 @@ void Game::printDrawPile(std::ofstream& fileStream)//prints the draw pile
         printPile.pop();
     }
 }
-void Game::printResults(std::ofstream& fileStream)//prints results of the game simulation
+void Game::printResults(std::ofstream& fileStream)
 {
     fileStream << "---------- RESULTS ----------" << endl;
     Player *bestPlayer;

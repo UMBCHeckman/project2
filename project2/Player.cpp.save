@@ -86,14 +86,14 @@ int Player::calculateScore(Player::STRATEGY strategy)//calculate the score based
         }
     }
     queue<Objective*> ObjectiveCopy = m_objectives;
-    for(int i = 0; i < m_objectives.size(); i++){//now that we have out objectives we can find our payoff
+    for(int i = 0; i < m_objectives.size(); i++){//now that we have out objectives we can 
         score += (ObjectiveCopy.front()->getPayoff());
         ObjectiveCopy.pop();
     }
     m_score = score;
     return score;
 }
-void Player::printResult(std::ofstream& fileStream)//print the results of the players playing
+void Player::printResult(std::ofstream& fileStream)
 {
     int startSize = m_objectives.size();
     for(int i = 0; i < startSize; i++){

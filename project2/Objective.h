@@ -1,5 +1,19 @@
 #ifndef OBJECTIVE_H
 #define OBJECTIVE_H
+/************************************************
+ ** File:    Objective.h
+
+ ** Project: CMSC 341 Project 2, Fall 2016
+
+ ** Author:  Steven Heckman
+ ** Date:    10/19/16
+ ** Section: 05
+ ** E-mail:  heckman1@umbc.edu
+ **
+ **   This file is the header file for the Objective object.
+ **   See Objective.h for details.
+ **
+ ***********************************************/
 #include "Commodity.h"
 #include "CommodityStore.h"
 #include <iostream>

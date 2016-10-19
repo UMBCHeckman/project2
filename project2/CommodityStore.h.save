@@ -1,7 +1,7 @@
 #ifndef COMMODITYSTORE_H
 #define COMMODITYSTORE_H
 /************************************************
- ** File:    CommodityStore.h
+ ** File:    Card.h
 
  ** Project: CMSC 341 Project 2, Fall 2016
 
@@ -10,8 +10,8 @@
  ** Section: 05
  ** E-mail:  heckman1@umbc.edu
  **
- **   This file is the header file for the CommodityStore object.
- **   See CommodityStore.cpp for details.
+ **   This file is the header file for the Card object.
+ **   See Card.cpp for details.
  **
  ***********************************************/
 #include <string>

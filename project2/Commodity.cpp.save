@@ -12,8 +12,8 @@
  **
  **   This file generates a "Commodity" object.
  **
- **   This file contains constructors a destructor and functions.
- **   This file gives an Commodity a name and a COLOR.
+ **   This file contains constructers a destructor and functions.
+ **   This file gives an Commodity a name and a C
  **
  ***********************************************/
 #include "Commodity.h"

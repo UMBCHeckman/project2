@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1476851681 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.cpp
+1476918376 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.cpp
 	<string>
 	<vector>
 	<iostream>
@@ -7,11 +7,6 @@
 	"CommodityStore.h"
 	"Card.h"
 	"Objective.h"
-	"CommodityStore.h"
-	<map>
-	<fstream>
-	<sstream>
-	<cstdlib>
 
 1476731555 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commoditystore.h
 	<string>
@@ -25,7 +20,7 @@
 1476751119 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commodity.h
 	<string>
 
-1476825440 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.h
+1476917089 c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\card.h
 	"Commodity.h"
 	"CommodityStore.h"
 	"Objective.h"
@@ -38,7 +33,7 @@
 	"CommodityStore.h"
 	<iostream>
 
-1476759821 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commodity.cpp
+1476918463 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\commodity.cpp
 	"Commodity.h"
 	<iostream>
 	<string>
@@ -54,7 +49,7 @@
 	<sstream>
 	<cstdlib>
 
-1476855477 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\driver.cpp
+1476918371 source:c:\users\kithe_000\documents\c++ stuff\project2\project2\project2\driver.cpp
 	"Commodity.h"
 	"CommodityStore.h"
 	"Objective.h"

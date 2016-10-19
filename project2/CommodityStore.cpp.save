@@ -12,7 +12,7 @@
  **
  **   This file generates a "CommodityStore" object.
  **
- **   This file contains a constructor a map and functions.
+ **   This file contains a constructer a map and functions.
  **   This file will map the name of a commodity to an enum "COLOR".
  **   This file will open a datafile of all the commodities and digest them into commodity objects.
  **
@@ -50,6 +50,6 @@ void CommodityStore::loadCommodities(string filename)//non default constructor, 
     dataFile.close();
 }
 Commodity* CommodityStore::getCommodity(string name){
-    return m_store.find(name)->second;//gets the commodity object based on the name of the commodity.
+    return m_store.find(name)->second;//gets the commodity object based on the n
 }
 #endif

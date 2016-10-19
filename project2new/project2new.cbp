@@ -45,6 +45,7 @@
 		<Unit filename="../project2/Objective.h" />
 		<Unit filename="../project2/Player.cpp" />
 		<Unit filename="../project2/Player.h" />
+		<Unit filename="cards.txt" />
 		<Unit filename="results.txt" />
 		<Extensions>
 			<code_completion />

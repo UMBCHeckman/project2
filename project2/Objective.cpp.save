@@ -35,15 +35,15 @@ string Objective::getDestination()const//get the destination of the objective
 {
     return m_sDestination;
 }
-Commodity* Objective::getCommodity()const//get the commodity of the objective. Note this is a commodity object, not just the commodity's name.
+Commodity* Objective::getCommodity()const//get the commodity of the object. 
 {
     return m_pCommodity;
 }
-int Objective::getPayoff()const//get the payoff of the objective.
+int Objective::getPayoff()const
 {
     return m_iPayoff;
 }
-void Objective::printObjective(ofstream& fileStream)//print the objective.
+void Objective::printObjective(ofstream& fileStream)
 {
     fileStream << getCommodity()->getName() << " to " << getDestination() << " for " << getPayoff() << endl;
 }
