@@ -1,0 +1,139 @@
+#ifndef GAME_CPP
+#define GAME_CPP
+/************************************************
+ ** File:    Game.cpp
+
+ ** Project: CMSC 341 Project 2, Fall 2016
+
+ ** Author:  Steven Heckman
+ ** Date:    10/19/16
+ ** Section: 05
+ ** E-mail:  heckman1@umbc.edu
+ **
+ **   This file generates a "Game" object.
+ **
+ **   This file contains constructors a destructor and functions.
+ **   This file will create a game object.
+ **   The game object typically only be created once, simulates and prints a game scenario.
+ **
+ ***********************************************/
+#include "Game.h"
+#include <iostream>
+#include <istream>
+#include <sstream>
+#define SSTR( x ) static_cast< std::ostringstream & >( \
+        ( std::ostringstream() << std::dec << x ) ).str()//This is a macro I found on stackoverflow for converting ints to strings. I'm sorry for reusing code, but I couldn't find another way.
+
+using namespace std;
+
+Game::Game()//default constructor
+{
+    //intentionally empty
+}
+Game::Game(string cardsFilename, string commodityFilename)//non default constructor, takes in filenames.
+{
+    m_bank.loadCommodities(commodityFilename);//creates m_bank, a commodity store object.
+    ifstream dataFile(cardsFilename.c_str());
+    string line;
+    string Destination1, Commodity1, Payoff1, Destination2, Commodity2, Payoff2, Destination3, Commodity3, Payoff3;//aspects of an Objective
+    Card *myCard;
+    Objective *myObjective;
+    while (getline(dataFile, line))
+    {
+        istringstream myData(line);
+        myData >> Destination1;
+        myData >> Commodity1;
+        myData >> Payoff1;
+        myData >> Destination2;
+        myData >> Commodity2;
+        myData >> Payoff2;
+        myData >> Destination3;
+        myData >> Commodity3;
+        myData >> Payoff3;
+        myCard = new Card();//creates a new card, then creates 3 it's 3 objectives, then adds those objectives to the card.
+        myObjective = new Objective((Destination1), (m_bank.getCommodity(Commodity1)), (atoi(Payoff1.c_str())));//Payoff must be converted from a string to an integer
+        myCard->addObjective(myObjective);
+        myObjective = new Objective((Destination2), (m_bank.getCommodity(Commodity2)), (atoi(Payoff2.c_str())));
+        myCard->addObjective(myObjective);
+        myObjective = new Objective((Destination3), (m_bank.getCommodity(Commodity3)), (atoi(Payoff3.c_str())));
+        //cerr << myObjective->getDestination() << myObjective->getCommodity()->getName() << myObjective->getPayoff() << endl;
+        myCard->addObjective(myObjective);
+        m_drawPile.push(myCard);//adds card to deck
+        //myCard = new Card(Destination1, Commodity1, Payoff1, Destination2, Commodity2, Payoff2, Destination3, Commodity3, Payoff3);
+        //*Commodityobj = CommodityStore::getCommodity(Commodity);
+        //myObjective = new Objective(Destination, Commodityobj, atoi(Payoff);
+        //m_drawPile.push(myCard);
+        //new Commodity(dataFile >> line, dataFile >> line)
+    }
+    dataFile.close();
+}
+void Game::runSimulation(int players, Player::STRATEGY strategy)//runs simulation of the game with the players playing with some strategy.
+{
+    string playerName;
+    Player *myPlayer;
+    for(int i = 0; i < players; i++)//for all the players
+    {
+        playerName = "Player " + SSTR(i+1);//creates a string of "Player X" where x is the number for the player
+        //cerr << playerName << endl;
+        myPlayer = new Player(playerName);//creates a new player with the correct name.
+        m_players.push_back(myPlayer);
+    }
+    int cardsPerPlayer = (m_drawPile.size() / m_players.size());//integer division for the number of cards we'll use. If there are more players than cards, no one gets a card.
+    if (cardsPerPlayer == 0)//if no one gets a card then there's no point running the game
+    {
+        cerr << "Not enough cards to go around! Try again with less players." << endl;
+        exit(1);
+    }
+    for (int j = 0; j < cardsPerPlayer; j++)//for the number of cards per player
+    {
+        for (unsigned int i = 0; i < m_players.size(); i++)//for the number of players
+        {
+            m_players[i]->addCard(m_drawPile.top());
+            m_drawPile.pop();
+        }
+    }
+    Player *bestPlayer;
+    int bestScore = 0;
+    for(unsigned int i = 0; i < m_players.size(); i++)//finds the best score and the player who has it
+    {
+        if(m_players[i]->calculateScore(strategy) > bestScore)
+        {
+            bestScore = m_players[i]->getScore();
+            bestPlayer = m_players[i];
+        }
+    }
+
+}
+void Game::printDrawPile(std::ofstream& fileStream)//prints the draw pile
+{
+    fileStream << "---------- Draw Pile ----------" << endl;
+    stack<Card*> printPile = m_drawPile;
+    //cerr << printPile.size() << endl;
+    int s = printPile.size();//til: don't use a stack in the declaration of a for loop that pops from that stack.
+    for(int i = 0; i < s; i++)
+    {
+        //cerr << i << endl;
+        printPile.top()->printCard(fileStream);
+        printPile.pop();
+    }
+}
+void Game::printResults(std::ofstream& fileStream)//prints results of the game simulation
+{
+    fileStream << "---------- RESULTS ----------" << endl;
+    Player *bestPlayer;
+    int bestScore = 0;
+    for(unsigned int i = 0; i < m_players.size(); i++)
+    {
+        fileStream << "--------" << m_players[i]->getName() << "------------" << endl;
+        m_players[i]->printResult(fileStream);
+        if(m_players[i]->getScore() > bestScore)
+        {
+            bestScore = m_players[i]->getScore();
+            bestPlayer = m_players[i];
+        }
+    }
+    fileStream << "--------------------------" << endl;
+    fileStream << "Winner: " << bestPlayer->getName() << " Score: " << bestScore << " points.";
+}
+
+#endif //GAME_CPP
